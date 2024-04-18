@@ -1,5 +1,5 @@
 import React from 'react';
-import { TbArrowNarrowRight } from 'react-icons/tb';
+import { TbArrowRight } from 'react-icons/tb';
 
 import Button from '../components/Button';
 import FlexDiv from '../components/FlexDiv';
@@ -15,10 +15,16 @@ const Header = () => {
         <br /> showcasing projects that blend innovative design
         <br /> with seamless functionality.
       </h2>
-      <FlexDiv className='mt-12 w-full items-center justify-between'>
+      <FlexDiv className='mt-14 w-full items-center justify-between'>
         <FlexDiv className='gap-4'>
           <Button>Explore portfolio</Button>
-          <Button variant='outlined' icon={<TbArrowNarrowRight />}>
+          <Button
+            variant='outlined'
+            className='group'
+            icon={
+              <TbArrowRight className='-rotate-45 text-2xl duration-200 group-hover:rotate-0' />
+            }
+          >
             Let&apos;s talk
           </Button>
         </FlexDiv>
