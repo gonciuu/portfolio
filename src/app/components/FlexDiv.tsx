@@ -1,23 +1,13 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-interface FlexDivProps {
-  children: React.ReactNode;
+interface FlexDivProps extends PropsWithChildren {
   className?: string;
-  align?: 'center' | 'start' | 'end' | 'between' | 'around';
-  justify?: 'center' | 'start' | 'end' | 'between' | 'around';
 }
 
-export default function FlexDiv({
-  children,
-  align = 'center',
-  justify = 'center',
-  className,
-}: FlexDivProps) {
+export default function FlexDiv({ children, className }: FlexDivProps) {
   return (
-    <div
-      className={twMerge(`flex items-${align} justify-${justify}`, className)}
-    >
+    <div className={twMerge(`flex items-center gap-4`, className)}>
       {children}
     </div>
   );

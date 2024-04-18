@@ -1,6 +1,9 @@
 import { DM_Sans } from 'next/font/google';
 
+import Navbar from './components/Navbar';
+
 import type { Metadata } from 'next';
+
 import './globals.css';
 
 const dmSans = DM_Sans({ subsets: ['latin'] });
@@ -17,7 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={dmSans.className}>{children}</body>
+      <body className={dmSans.className}>
+        <div className='mx-auto max-w-screen-xl px-4'>
+          <Navbar />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
