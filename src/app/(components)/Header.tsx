@@ -7,10 +7,10 @@ import FlexDiv from '../components/FlexDiv';
 const Header = () => {
   return (
     <div className='mt-32'>
-      <h1 className='text-6xl font-bold leading-tight'>
+      <h1>
         Crafting Mobile <br /> Apps with Flutter
       </h1>
-      <h2 className='mt-4 text-3xl leading-tight'>
+      <h2 className='mt-4'>
         Dive into my journey as a Flutter mobile developer,
         <br /> showcasing projects that blend innovative design
         <br /> with seamless functionality.

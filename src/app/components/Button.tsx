@@ -1,4 +1,5 @@
-import React, { PropsWithChildren } from 'react';
+import Link from 'next/link';
+import React, { HTMLAttributeAnchorTarget, PropsWithChildren } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import FlexDiv from './FlexDiv';
@@ -7,6 +8,9 @@ interface ButtonProps extends PropsWithChildren {
   className?: string;
   variant?: 'filled' | 'outlined';
   icon?: React.ReactNode;
+  href?: string;
+  target?: HTMLAttributeAnchorTarget;
+  rel?: string;
 }
 
 export default function Button({
@@ -14,13 +18,16 @@ export default function Button({
   children,
   variant = 'filled',
   icon,
+  href,
+  target,
+  rel,
 }: ButtonProps) {
   const filledVariantClasses =
     'bg-gray-900 text-white border border-gray-900 hover:bg-gray-700 ';
   const outlinedVariantClasses =
-    'border border-gray-900 text-gray-900 hover:text-gray-500 hover:border-gray-500';
+    'border border-gray-900 text-gray-900 hover:text-gray-600 hover:border-gray-600';
 
-  return (
+  const button = (
     <button
       className={twMerge(
         'rounded-full px-8 py-3 text-xl outline-amber-500 transition duration-200 ease-in-out hover:shadow-lg',
@@ -34,4 +41,14 @@ export default function Button({
       </FlexDiv>
     </button>
   );
+
+  if (href) {
+    return (
+      <Link href={href} className='block' target={target} rel={rel}>
+        {button}
+      </Link>
+    );
+  }
+
+  return button;
 }

@@ -7,3 +7,15 @@ body {
   margin: 0;
   background-color: white;
 }
+
+@layer base {
+  h1 {
+    @apply text-6xl;
+    @apply font-bold;
+    @apply leading-tight;
+  }
+  h2 {
+    @apply text-3xl;
+    @apply leading-tight;
+  }
+}

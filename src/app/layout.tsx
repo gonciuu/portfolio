@@ -1,5 +1,6 @@
 import { DM_Sans } from 'next/font/google';
 
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 
 import type { Metadata } from 'next';
@@ -24,6 +25,7 @@ export default function RootLayout({
         <div className='mx-auto max-w-screen-xl px-4'>
           <Navbar />
           {children}
+          <Footer />
         </div>
       </body>
     </html>

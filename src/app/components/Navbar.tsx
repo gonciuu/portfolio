@@ -11,10 +11,7 @@ export default function Navbar() {
     <FlexDiv className='flex w-full justify-between py-12'>
       <Image src='logo.svg' alt='logo' width={100} height={50} />
       <FlexDiv className='gap-8'>
-        <AnimatedText>Work</AnimatedText>
-        <AnimatedText>Skillset</AnimatedText>
-        <AnimatedText>About</AnimatedText>
-        <AnimatedText>Contact</AnimatedText>
+        <Bookmarks />
         <Button
           variant='outlined'
           className='group px-4 py-2 transition-all'
@@ -26,5 +23,16 @@ export default function Navbar() {
         </Button>
       </FlexDiv>
     </FlexDiv>
+  );
+}
+
+export function Bookmarks() {
+  return (
+    <>
+      <AnimatedText>Work</AnimatedText>
+      <AnimatedText>Skillset</AnimatedText>
+      <AnimatedText>About</AnimatedText>
+      <AnimatedText>Contact</AnimatedText>
+    </>
   );
 }
