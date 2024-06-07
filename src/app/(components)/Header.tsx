@@ -6,7 +6,7 @@ import FlexDiv from '../components/FlexDiv';
 
 const Header = () => {
   return (
-    <div className='mt-32'>
+    <div className='py-32'>
       <h1>
         Crafting Mobile <br /> Apps with Flutter
       </h1>

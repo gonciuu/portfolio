@@ -8,15 +8,18 @@ import {
   TbHeartFilled,
 } from 'react-icons/tb';
 
+import { HrefProps } from '../utils/data';
+
 import AnimatedText from './AnimatedText';
 import Button from './Button';
 import FlexDiv from './FlexDiv';
+import GradientBox from './GradientBox';
 import { Bookmarks } from './Navbar';
 
 export default function Footer() {
   return (
     <div className='py-12'>
-      <div className='w-full justify-between rounded-3xl bg-gradient-to-br from-gray-200 to-gray-100 p-12'>
+      <GradientBox>
         <FlexDiv className='w-full justify-between gap-4'>
           <h1 className='text-5xl'>Let&apos;s talk</h1>
           <Image src='/logo.svg' alt='Logo' width={80} height={40} />
@@ -54,7 +57,7 @@ export default function Footer() {
             icon={<TbBrandMedium />}
           />
         </FlexDiv>
-      </div>
+      </GradientBox>
       <FlexDiv className='mt-12 justify-between px-2'>
         <div className='flex-1'>© {new Date().getFullYear()}</div>
         <FlexDiv className='gap-6'>
@@ -70,12 +73,11 @@ export default function Footer() {
   );
 }
 
-interface SocialIconProps {
-  href: string;
+interface SocialIconProps extends HrefProps {
   icon: React.ReactNode;
 }
 
-function SocialIcon({ href, icon }: SocialIconProps) {
+function SocialIcon({ icon, href }: SocialIconProps) {
   return (
     <Button
       variant='outlined'

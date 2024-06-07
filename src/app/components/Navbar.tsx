@@ -32,7 +32,13 @@ export function Bookmarks() {
       <AnimatedText>Work</AnimatedText>
       <AnimatedText>Skillset</AnimatedText>
       <AnimatedText>About</AnimatedText>
-      <AnimatedText>Contact</AnimatedText>
+      <AnimatedText
+        href='https://nocadis.com'
+        target='_blank'
+        rel='noreferrer noopener'
+      >
+        Nocadis
+      </AnimatedText>
     </>
   );
 }

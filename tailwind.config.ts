@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      borderRadius: {
+        '3xl': '3rem',
+      },
       colors: {
         gray: {
           100: '#ececec',

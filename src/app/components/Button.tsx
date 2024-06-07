@@ -1,16 +1,15 @@
 import Link from 'next/link';
-import React, { HTMLAttributeAnchorTarget, PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 import { twMerge } from 'tailwind-merge';
+
+import { HrefProps } from '../utils/data';
 
 import FlexDiv from './FlexDiv';
 
-interface ButtonProps extends PropsWithChildren {
+interface ButtonProps extends PropsWithChildren, HrefProps {
   className?: string;
   variant?: 'filled' | 'outlined';
   icon?: React.ReactNode;
-  href?: string;
-  target?: HTMLAttributeAnchorTarget;
-  rel?: string;
 }
 
 export default function Button({
