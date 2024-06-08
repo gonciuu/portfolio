@@ -18,4 +18,11 @@ body {
     @apply text-3xl;
     @apply leading-tight;
   }
+  ul,
+  ol {
+    list-style: revert;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
 }
