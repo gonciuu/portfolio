@@ -5,41 +5,17 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: white;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+@layer base {
+  h1 {
+    @apply text-6xl;
+    @apply font-bold;
+    @apply leading-tight;
   }
-  100% {
-    opacity: 1;
+  h2 {
+    @apply text-3xl;
+    @apply leading-tight;
   }
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
-  grid-gap: 5px;
-  align-items: center;
-  justify-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-.circle {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #4b5563; /* This is the Tailwind color gray-600 */
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-}
-
-/* Dynamic delay for animation */
-.circle:nth-child(odd) {
-  animation-delay: calc(0.1s * var(--i));
-}
-
-.circle:nth-child(even) {
-  animation-delay: calc(0.05s * var(--i));
 }
