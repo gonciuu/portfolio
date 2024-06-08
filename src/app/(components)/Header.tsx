@@ -1,6 +1,7 @@
 import React from 'react';
 import { TbArrowRight } from 'react-icons/tb';
 
+import AnimatedText from '../components/AnimatedText';
 import Button from '../components/Button';
 import FlexDiv from '../components/FlexDiv';
 
@@ -28,10 +29,12 @@ const Header = () => {
             Let&apos;s talk
           </Button>
         </FlexDiv>
-        <div>
+        <FlexDiv className='flex-col items-end justify-end gap-0'>
           <span>flutter developer · designer</span>
-          <p>Scroll to explore</p>
-        </div>
+          <AnimatedText className='text-md mt-1 h-5 text-end' href='#projects'>
+            Scroll to explore
+          </AnimatedText>
+        </FlexDiv>
       </FlexDiv>
     </div>
   );

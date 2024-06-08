@@ -24,7 +24,7 @@ interface ProjectCardProps {
 
 function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className='group cursor-pointer'>
+    <section className='group cursor-pointer' id='projects'>
       <GradientBox className='relative p-0'>
         <Button
           className='group absolute left-8 top-8 p-3 opacity-0 transition-all duration-500 ease-in-out group-hover:-rotate-45 group-hover:scale-110 group-hover:opacity-100'
@@ -50,6 +50,6 @@ function ProjectCard({ project }: ProjectCardProps) {
           <TbArrowRight className='-rotate-45' />
         </FlexDiv>
       </AnimatedText>
-    </div>
+    </section>
   );
 }

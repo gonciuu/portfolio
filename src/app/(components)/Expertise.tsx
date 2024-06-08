@@ -5,13 +5,13 @@ import { ExpertiseInfo, expertise } from '../utils/data';
 
 export default function Expertise() {
   return (
-    <section className='py-16'>
+    <section className='py-24'>
       <h2>
         Demonstrating my expertise in efficient cross-platform app development,
         sophisticated state management, seamless API integration, and optimized
         performance to deliver superior user experiences.
       </h2>
-      <div className='grid grid-cols-3 gap-8 py-24'>
+      <div className='grid grid-cols-3 gap-8 pt-20'>
         {expertise.map((expertise) => (
           <ExpertiseCard
             key={expertise.title}
