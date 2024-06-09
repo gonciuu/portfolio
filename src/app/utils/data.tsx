@@ -10,6 +10,31 @@ import {
   TbBrandGithub,
 } from 'react-icons/tb';
 
+export interface NavigationItem extends HrefProps {
+  children: React.ReactNode;
+}
+
+export const navigationItems: NavigationItem[] = [
+  {
+    children: 'Work',
+    href: '/#projects',
+  },
+  {
+    children: 'Skillset',
+    href: '/#expertise',
+  },
+  {
+    children: 'About',
+    href: '/#about',
+  },
+  {
+    children: 'Nocadis',
+    href: 'https://nocadis.com',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+];
+
 export interface HrefProps {
   href?: string;
   target?: HTMLAttributeAnchorTarget;
@@ -103,12 +128,7 @@ export interface JourneyInfo extends HrefProps {
 
 export const journeys: JourneyInfo[] = [
   {
-    title: (
-      <>
-        My mobile dev
-        <br /> journey
-      </>
-    ),
+    title: <>My mobile dev journey</>,
     buttonText: 'Visit Github',
     buttonIcon: <TbBrandGithub />,
     href: 'https://github.com/gonciuu',

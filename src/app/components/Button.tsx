@@ -10,6 +10,7 @@ interface ButtonProps extends PropsWithChildren, HrefProps {
   className?: string;
   variant?: 'filled' | 'outlined';
   icon?: React.ReactNode;
+  onClick?: () => void;
 }
 
 export default function Button({
@@ -20,6 +21,7 @@ export default function Button({
   href,
   target,
   rel,
+  onClick,
 }: ButtonProps) {
   const filledVariantClasses =
     'bg-gray-900 text-white border border-gray-900 hover:bg-gray-700 ';
@@ -33,6 +35,7 @@ export default function Button({
         variant === 'filled' ? filledVariantClasses : outlinedVariantClasses,
         className,
       )}
+      onClick={onClick}
     >
       <FlexDiv className='gap-2'>
         {children}

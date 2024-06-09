@@ -11,7 +11,7 @@ export default function Expertise() {
         sophisticated state management, seamless API integration, and optimized
         performance to deliver superior user experiences.
       </h2>
-      <div className='grid grid-cols-3 gap-8 pt-20'>
+      <div className='grid grid-cols-1 gap-8 pt-20 xs:grid-cols-2 lg:grid-cols-3'>
         {expertise.map((expertise) => (
           <ExpertiseCard
             key={expertise.title}

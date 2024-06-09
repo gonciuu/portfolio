@@ -1,3 +1,6 @@
+'use client';
+
+import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 import { TbArrowRight } from 'react-icons/tb';
@@ -8,9 +11,26 @@ import FlexDiv from '../components/FlexDiv';
 import GradientBox from '../components/GradientBox';
 import { Project, projects } from '../utils/data';
 
+const cardVariants: Variants = {
+  offscreen: {
+    y: 200,
+    opacity: 0,
+    scale: 0.7,
+  },
+  onscreen: {
+    y: 0,
+    scale: 1,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      duration: 0.8,
+    },
+  },
+};
+
 export default function Projects() {
   return (
-    <div className='grid grid-cols-2 gap-16 py-16'>
+    <div className='grid grid-cols-1 gap-16 py-16 md:grid-cols-2'>
       {projects.map((project) => (
         <ProjectCard key={project.name} project={project} />
       ))}
@@ -24,7 +44,14 @@ interface ProjectCardProps {
 
 function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <section className='group cursor-pointer' id='projects'>
+    <motion.section
+      className='group cursor-pointer'
+      id='projects'
+      initial='offscreen'
+      whileInView='onscreen'
+      viewport={{ once: true, amount: 0 }}
+      variants={cardVariants}
+    >
       <GradientBox className='relative p-0'>
         <Button
           className='group absolute left-8 top-8 p-3 opacity-0 transition-all duration-500 ease-in-out group-hover:-rotate-45 group-hover:scale-110 group-hover:opacity-100'
@@ -50,6 +77,6 @@ function ProjectCard({ project }: ProjectCardProps) {
           <TbArrowRight className='-rotate-45' />
         </FlexDiv>
       </AnimatedText>
-    </section>
+    </motion.section>
   );
 }
