@@ -9,7 +9,6 @@ import { navigationItems } from '../utils/data';
 
 import AnimatedText from './AnimatedText';
 import Button from './Button';
-import FlexDiv from './FlexDiv';
 
 const sidebar: Variants = {
   open: (height = 1000) => ({
@@ -79,7 +78,7 @@ const HanburgerNav = () => {
       ref={containerRef}
     >
       <motion.div
-        className='fixed right-0 top-0 z-10 h-screen w-[300px] bg-gray-100 px-12 py-24'
+        className='fixed right-0 top-0 z-10 h-screen w-[300px] bg-gray-50 px-12 py-24'
         variants={sidebar}
         transition={{
           duration: 0.7,

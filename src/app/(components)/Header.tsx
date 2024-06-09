@@ -24,7 +24,7 @@ const Header = () => {
         Crafting Mobile <br /> Apps with Flutter
       </motion.h1>
       <motion.h2
-        className='mt-4 w-3/5'
+        className='mt-4 max-w-[700px]'
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 40 }}
         transition={{ duration: 0.7, type: 'spring', bounce: 0.6 }}
@@ -33,8 +33,11 @@ const Header = () => {
         Dive into my journey as a Flutter mobile developer, showcasing projects
         that blend innovative design with seamless functionality.
       </motion.h2>
-      <FlexDiv className='mt-14 w-full items-center justify-between'>
-        <FlexDiv className='gap-4'>
+      <FlexDiv
+        className='mt-12 w-full  md:items-center md:justify-between'
+        wrapInMobile
+      >
+        <FlexDiv className='gap-4' wrapInMobile>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 20 }}
@@ -70,13 +73,13 @@ const Header = () => {
             </Button>
           </motion.div>
         </FlexDiv>
-        <FlexDiv className='flex-col items-end justify-end gap-1'>
-          <AnimatedText className='text-md mt-1 h-5 text-end'>
+        <FlexDiv className='ml-2 mt-4 flex-col items-start gap-1 md:ml-0 md:mt-0 md:items-end md:justify-end'>
+          <AnimatedText className='text-md mt-1 h-5 md:text-end'>
             flutter developer · designer
           </AnimatedText>
-          <AnimatedText className='text-md mt-1 h-5 text-end'>
+          <AnimatedText className='text-md mt-1 h-5 md:text-end'>
             Scroll to explore
-          </AnimatedText>{' '}
+          </AnimatedText>
         </FlexDiv>
       </FlexDiv>
     </div>

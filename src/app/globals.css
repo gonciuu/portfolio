@@ -10,12 +10,14 @@ body {
 
 @layer base {
   h1 {
-    @apply text-6xl;
+    @apply text-4xl;
+    @apply md:text-6xl;
     @apply font-bold;
     @apply leading-tight;
   }
   h2 {
-    @apply text-3xl;
+    @apply text-2xl;
+    @apply md:text-3xl;
     @apply leading-tight;
   }
   ul,
