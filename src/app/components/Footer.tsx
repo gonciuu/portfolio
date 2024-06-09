@@ -19,15 +19,13 @@ import { Bookmarks } from './Navbar';
 export default function Footer() {
   return (
     <div className='py-12'>
-      <GradientBox>
-        <FlexDiv className='w-full justify-between gap-4'>
-          <h1 className='text-5xl'>Let&apos;s talk</h1>
+      <GradientBox className='p-8 md:p-12'>
+        <FlexDiv className='w-full justify-between gap-4' wrapInMobile>
+          <h1 className='text-4xl md:text-5xl'>Let&apos;s talk</h1>
           <Image src='/logo.svg' alt='Logo' width={80} height={40} />
         </FlexDiv>
-        <h2 className='mt-4'>
-          Let&apos;s start creating amazing
-          <br />
-          things together
+        <h2 className='mt-4 max-w-[400px]'>
+          Let&apos;s start creating amazing things together
         </h2>
         <AnimatedText
           className='mt-8 font-bold underline'
@@ -35,7 +33,7 @@ export default function Footer() {
         >
           kacperwojak17@gmail.com
         </AnimatedText>
-        <FlexDiv className='mt-12 gap-4'>
+        <FlexDiv className='mt-12 gap-4' wrapInMobile>
           <Button
             className='group'
             icon={
@@ -44,21 +42,23 @@ export default function Footer() {
           >
             Contact Me
           </Button>
-          <SocialIcon
-            href='https://www.linkedin.com/in/kacper-wojak/'
-            icon={<TbBrandLinkedin />}
-          />
-          <SocialIcon
-            href='https://www.linkedin.com/in/kacper-wojak/'
-            icon={<TbBrandXdeep />}
-          />
-          <SocialIcon
-            href='https://www.linkedin.com/in/kacper-wojak/'
-            icon={<TbBrandMedium />}
-          />
+          <FlexDiv className='gap-4'>
+            <SocialIcon
+              href='https://www.linkedin.com/in/kacper-wojak/'
+              icon={<TbBrandLinkedin />}
+            />
+            <SocialIcon
+              href='https://www.linkedin.com/in/kacper-wojak/'
+              icon={<TbBrandXdeep />}
+            />
+            <SocialIcon
+              href='https://www.linkedin.com/in/kacper-wojak/'
+              icon={<TbBrandMedium />}
+            />
+          </FlexDiv>
         </FlexDiv>
       </GradientBox>
-      <FlexDiv className='mt-12 justify-between px-2'>
+      <FlexDiv className='mt-12 justify-between px-2' wrapInMobile>
         <div className='flex-1'>© {new Date().getFullYear()}</div>
         <FlexDiv className='gap-6'>
           <Bookmarks />
