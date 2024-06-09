@@ -24,15 +24,14 @@ const Header = () => {
         Crafting Mobile <br /> Apps with Flutter
       </motion.h1>
       <motion.h2
-        className='mt-4'
+        className='mt-4 w-3/5'
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 40 }}
         transition={{ duration: 0.7, type: 'spring', bounce: 0.6 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        Dive into my journey as a Flutter mobile developer,
-        <br /> showcasing projects that blend innovative design
-        <br /> with seamless functionality.
+        Dive into my journey as a Flutter mobile developer, showcasing projects
+        that blend innovative design with seamless functionality.
       </motion.h2>
       <FlexDiv className='mt-14 w-full items-center justify-between'>
         <FlexDiv className='gap-4'>

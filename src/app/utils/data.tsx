@@ -10,6 +10,31 @@ import {
   TbBrandGithub,
 } from 'react-icons/tb';
 
+export interface NavigationItem extends HrefProps {
+  children: React.ReactNode;
+}
+
+export const navigationItems: NavigationItem[] = [
+  {
+    children: 'Work',
+    href: '/#projects',
+  },
+  {
+    children: 'Skillset',
+    href: '/#expertise',
+  },
+  {
+    children: 'About',
+    href: '/#about',
+  },
+  {
+    children: 'Nocadis',
+    href: 'https://nocadis.com',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+];
+
 export interface HrefProps {
   href?: string;
   target?: HTMLAttributeAnchorTarget;
