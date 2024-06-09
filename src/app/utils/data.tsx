@@ -128,12 +128,7 @@ export interface JourneyInfo extends HrefProps {
 
 export const journeys: JourneyInfo[] = [
   {
-    title: (
-      <>
-        My mobile dev
-        <br /> journey
-      </>
-    ),
+    title: <>My mobile dev journey</>,
     buttonText: 'Visit Github',
     buttonIcon: <TbBrandGithub />,
     href: 'https://github.com/gonciuu',

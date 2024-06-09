@@ -12,7 +12,7 @@ export default function Journey() {
         Crafting Dynamic Mobile Applications and Delivering Exceptional
         User-Centric Solutions.
       </h2>
-      <FlexDiv className='w-full flex-col gap-40 py-24'>
+      <FlexDiv className='w-full flex-col gap-24 py-24 md:gap-40'>
         {journeys.map((journey, i) => (
           <JourneyCard key={i} {...journey} />
         ))}
@@ -31,9 +31,12 @@ function JourneyCard({
   rel,
 }: JourneyInfo) {
   return (
-    <FlexDiv className='w-full justify-between gap-8'>
-      <div>
-        <h1>{title}</h1>
+    <FlexDiv
+      className='w-full justify-between gap-8 md:items-center'
+      wrapInMobile
+    >
+      <div className='flex-1'>
+        <h1 className='max-w-[500px]'>{title}</h1>
         <Button
           variant='outlined'
           icon={<div className='text-2xl'>{buttonIcon}</div>}
@@ -45,7 +48,7 @@ function JourneyCard({
           {buttonText}
         </Button>
       </div>
-      <ul className='w-1/3 text-lg'>
+      <ul className='max-w-[500px] flex-1 px-8 text-lg'>
         {items.map((item, i) => (
           <li key={i}>{item}</li>
         ))}

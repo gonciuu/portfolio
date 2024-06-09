@@ -30,7 +30,7 @@ const cardVariants: Variants = {
 
 export default function Projects() {
   return (
-    <div className='grid grid-cols-2 gap-16 py-16'>
+    <div className='grid grid-cols-1 gap-16 py-16 md:grid-cols-2'>
       {projects.map((project) => (
         <ProjectCard key={project.name} project={project} />
       ))}
