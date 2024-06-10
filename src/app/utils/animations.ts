@@ -6,7 +6,7 @@ interface EntranceTransitionProps {
 
 export function entranceTransition({
   initialPosition = 30,
-  delay = 0,
+  delay = 0.2,
   amount = 0.5,
 }: EntranceTransitionProps = {}) {
   return {
@@ -42,3 +42,7 @@ export const variantItem = {
     },
   },
 };
+
+export const commonTransition = entranceTransition({
+  initialPosition: -30,
+});
