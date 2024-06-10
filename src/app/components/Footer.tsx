@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import * as React from 'react';
 import {
@@ -8,6 +11,7 @@ import {
   TbHeartFilled,
 } from 'react-icons/tb';
 
+import { commonTransition } from '../utils/animations';
 import { HrefProps } from '../utils/data';
 
 import AnimatedText from './AnimatedText';
@@ -18,7 +22,7 @@ import { Bookmarks } from './Navbar';
 
 export default function Footer() {
   return (
-    <div className='py-12'>
+    <motion.div className='py-12' {...commonTransition}>
       <GradientBox className='p-8 md:p-12'>
         <FlexDiv className='w-full justify-between gap-4' wrapInMobile>
           <h1 className='text-4xl md:text-5xl'>Let&apos;s talk</h1>
@@ -65,11 +69,16 @@ export default function Footer() {
         </FlexDiv>
         <FlexDiv className='flex-1 justify-end gap-1'>
           Created with
-          <TbHeartFilled className='text-red-600' />
+          <motion.div
+            animate={{ scale: [1, 1.3, 1] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+          >
+            <TbHeartFilled className='text-red-600' />
+          </motion.div>
           by Kacper
         </FlexDiv>
       </FlexDiv>
-    </div>
+    </motion.div>
   );
 }
 
