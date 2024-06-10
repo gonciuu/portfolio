@@ -1,16 +1,18 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
+import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 import { TbMenuDeep, TbX } from 'react-icons/tb';
 
 import { useDimensions } from '../hooks/useDimensions';
-import { navigationItems } from '../utils/data';
+import { variantsContainer, variantItem } from '../utils/animations';
+import { NavigationItem, navigationItems } from '../utils/data';
 
 import AnimatedText from './AnimatedText';
 import Button from './Button';
 
-const sidebar: Variants = {
+const sidebarAnimation: Variants = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 244px 56px)`,
     transition: {
@@ -26,32 +28,6 @@ const sidebar: Variants = {
       type: 'spring',
       stiffness: 400,
       damping: 40,
-    },
-  },
-};
-
-const container = {
-  open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-  },
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
-};
-
-const item = {
-  open: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { stiffness: 1000, velocity: -100 },
-    },
-  },
-  closed: {
-    y: 50,
-    opacity: 0,
-    transition: {
-      y: { stiffness: 1000 },
     },
   },
 };
@@ -78,14 +54,16 @@ const HanburgerNav = () => {
       ref={containerRef}
     >
       <motion.div
-        className='fixed right-0 top-0 z-10 h-screen w-[300px] bg-gray-50 px-12 py-24'
-        variants={sidebar}
+        className='fixed right-0 top-0 z-10 h-screen w-[300px] border-l border-gray-200 bg-gray-50 p-12'
+        variants={sidebarAnimation}
         transition={{
           duration: 0.7,
           bounce: 0,
         }}
       >
-        <motion.div variants={container} className='flex flex-col'>
+        <Image src='logo.svg' alt='logo' width={100} height={50} />
+
+        <motion.div variants={variantsContainer} className='mt-8 flex flex-col'>
           {mobileNavItems.map((item) => (
             <NavItem key={item.href} {...item}>
               {item.children}
@@ -109,11 +87,11 @@ const HanburgerNav = () => {
   );
 };
 
-function NavItem(props: { children: React.ReactNode }) {
+function NavItem(props: NavigationItem) {
   return (
     <motion.a
       className='group cursor-pointer list-none py-3'
-      variants={item}
+      variants={variantItem}
       {...props}
     >
       <AnimatedText>{props.children}</AnimatedText>
