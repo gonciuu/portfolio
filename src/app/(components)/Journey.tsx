@@ -64,9 +64,10 @@ function JourneyCard({
         variants={variantsContainer}
         initial='closed'
         whileInView='open'
+        viewport={{ once: true }}
       >
         {items.map((item, i) => (
-          <motion.li key={i} variants={variantItem}>
+          <motion.li key={i} variants={variantItem} viewport={{ once: true }}>
             {item}
           </motion.li>
         ))}
