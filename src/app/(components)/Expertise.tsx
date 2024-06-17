@@ -9,7 +9,7 @@ import { ExpertiseInfo, expertise } from '../utils/data';
 
 export default function Expertise() {
   return (
-    <section className='py-24'>
+    <section className='py-24' id='expertise'>
       <motion.h2 {...commonTransition}>
         Demonstrating my expertise in efficient cross-platform app development,
         sophisticated state management, seamless API integration, and optimized

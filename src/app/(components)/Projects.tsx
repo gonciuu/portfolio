@@ -46,7 +46,7 @@ interface ProjectCardProps {
 function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <motion.section
-      className='group cursor-pointer'
+      className='group cursor-pointer py-8'
       id='projects'
       initial='offscreen'
       whileInView='onscreen'
