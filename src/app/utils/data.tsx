@@ -5,9 +5,9 @@ import {
   TbDeviceMobile,
   TbFaceId,
   TbGitPullRequest,
-  TbCircleLetterR,
   TbFileText,
   TbBrandGithub,
+  TbUserStar,
 } from 'react-icons/tb';
 
 export interface NavigationItem extends HrefProps {
@@ -84,38 +84,39 @@ export interface ExpertiseInfo {
 export const expertise: ExpertiseInfo[] = [
   {
     icon: <TbArrowsMaximize />,
-    title: 'Cross-platform',
+    title: 'Cross-platform Development',
     description:
-      'Understanding and implementing applications that work seamlessly on both iOS and Android.',
+      'Specialized in building seamless and performant applications for both iOS and Android using Flutter.',
   },
   {
     icon: <TbDatabase />,
-    title: 'State Management',
-    description: 'Efficiently managing the state of the application.',
+    title: 'State Management with Riverpod',
+    description:
+      'Expert in managing complex application state efficiently using Riverpod for scalable and maintainable code.',
   },
   {
     icon: <TbDeviceMobile />,
     title: 'API Integration',
     description:
-      'Seamlessly integrating APIs to enhance the app functionality.',
+      'Skilled in integrating various RESTful APIs using the Dio package to enhance app functionality and provide seamless user experiences.',
   },
   {
     icon: <TbFaceId />,
     title: 'Performance Optimization',
     description:
-      'Optimizing app performance to deliver superior user experiences.',
+      'Proficient in optimizing application performance to ensure fast, responsive, and smooth user experiences.',
   },
   {
     icon: <TbGitPullRequest />,
-    title: 'API Integration',
+    title: 'Fastlane CI/CD',
     description:
-      'Seamlessly integrating APIs to enhance the app functionality.',
+      'Experienced in using Fastlane to automate building, testing, and deploying Flutter applications.',
   },
   {
-    icon: <TbCircleLetterR />,
-    title: 'Performance Optimization',
+    icon: <TbUserStar />,
+    title: 'UI/UX Design',
     description:
-      'Optimizing app performance to deliver superior user experiences.',
+      'Adept at designing intuitive and visually appealing user interfaces that enhance user engagement and satisfaction.',
   },
 ];
 
@@ -128,33 +129,33 @@ export interface JourneyInfo extends HrefProps {
 
 export const journeys: JourneyInfo[] = [
   {
-    title: <>My mobile dev journey</>,
+    title: <>My Mobile Development Journey</>,
     buttonText: 'Visit Github',
     buttonIcon: <TbBrandGithub />,
     href: 'https://github.com/gonciuu',
     target: '_blank',
     rel: 'noopener noreferrer',
     items: [
-      'Kotlin beginnings with hobby Android Apps',
-      'Transitioned to Flutter for cross-platform development',
-      'Developed and maintained 10+ Flutter apps',
-      'Contributed to open-source projects',
-      'Published 5+ Flutter packages',
+      'Started with Kotlin and Android development, creating hobby projects',
+      'Transitioned to Flutter for its cross-platform capabilities',
+      'Developed and maintained hobby and commercial Flutter apps',
+      'Extensive experience with popular Flutter packages like Riverpod, Dio, and more',
+      'Contributed to open-source projects and the Flutter community',
     ],
   },
   {
-    title: 'Experience',
+    title: 'Professional Experience',
     buttonText: 'Download Resume',
     buttonIcon: <TbFileText />,
     href: '/resume.pdf',
     target: '_blank',
     rel: 'noopener noreferrer',
     items: [
-      '2+ years of experience in Flutter',
-      '2+ years of experience in Android',
-      '1+ year of experience in iOS',
-      '2+ years of experience in Firebase',
-      '2+ years of experience in Git',
+      '2+ years of experience in Android development using Kotlin',
+      '2+ years of experience with Flutter',
+      '1+ year of experience in iOS development',
+      'Proficient in using Git for version control',
+      'Currently working at Nocadis, developing robust mobile solutions',
     ],
   },
 ];
