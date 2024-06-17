@@ -8,6 +8,7 @@ import {
   TbCircleLetterR,
   TbFileText,
   TbBrandGithub,
+  TbUserStar,
 } from 'react-icons/tb';
 
 export interface NavigationItem extends HrefProps {
@@ -84,38 +85,39 @@ export interface ExpertiseInfo {
 export const expertise: ExpertiseInfo[] = [
   {
     icon: <TbArrowsMaximize />,
-    title: 'Cross-platform',
+    title: 'Cross-platform Development',
     description:
-      'Understanding and implementing applications that work seamlessly on both iOS and Android.',
+      'Specialized in building seamless and performant applications for both iOS and Android using Flutter.',
   },
   {
     icon: <TbDatabase />,
-    title: 'State Management',
-    description: 'Efficiently managing the state of the application.',
+    title: 'State Management with Riverpod',
+    description:
+      'Expert in managing complex application state efficiently using Riverpod for scalable and maintainable code.',
   },
   {
     icon: <TbDeviceMobile />,
     title: 'API Integration',
     description:
-      'Seamlessly integrating APIs to enhance the app functionality.',
+      'Skilled in integrating various RESTful APIs using the Dio package to enhance app functionality and provide seamless user experiences.',
   },
   {
     icon: <TbFaceId />,
     title: 'Performance Optimization',
     description:
-      'Optimizing app performance to deliver superior user experiences.',
+      'Proficient in optimizing application performance to ensure fast, responsive, and smooth user experiences.',
   },
   {
     icon: <TbGitPullRequest />,
-    title: 'API Integration',
+    title: 'Fastlane CI/CD',
     description:
-      'Seamlessly integrating APIs to enhance the app functionality.',
+      'Experienced in using Fastlane to automate building, testing, and deploying Flutter applications.',
   },
   {
-    icon: <TbCircleLetterR />,
-    title: 'Performance Optimization',
+    icon: <TbUserStar />,
+    title: 'UI/UX Design',
     description:
-      'Optimizing app performance to deliver superior user experiences.',
+      'Adept at designing intuitive and visually appealing user interfaces that enhance user engagement and satisfaction.',
   },
 ];
 
