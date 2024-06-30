@@ -15,7 +15,7 @@ import { JourneyInfo, journeys } from '../utils/data';
 
 export default function Journey() {
   return (
-    <section>
+    <section id='about' className='py-8'>
       <motion.h2 {...commonTransition}>
         Discover My Journey: A Passionate Flutter Developer Dedicated to
         Crafting Dynamic Mobile Applications and Delivering Exceptional

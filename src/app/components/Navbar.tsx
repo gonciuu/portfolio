@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import * as React from 'react';
 import { TbArrowRight } from 'react-icons/tb';
 
@@ -35,7 +36,6 @@ export default function Navbar() {
           </FlexDiv>
         </FlexDiv>
       </motion.div>
-
       <HanburgerNav />
     </FlexDiv>
   );
@@ -45,7 +45,14 @@ export function Bookmarks() {
   return (
     <>
       {navigationItems.map((item) => (
-        <AnimatedText key={item.href}>{item.children}</AnimatedText>
+        <Link
+          key={item.href}
+          href={item.href ?? '#'}
+          target={item.target}
+          rel={item.rel}
+        >
+          <AnimatedText>{item.children}</AnimatedText>
+        </Link>
       ))}
     </>
   );
