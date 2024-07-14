@@ -10,6 +10,7 @@ import Button from '../components/Button';
 import FlexDiv from '../components/FlexDiv';
 import GradientBox from '../components/GradientBox';
 import { Project, projects } from '../utils/data';
+import { twMerge } from 'tailwind-merge';
 
 const cardVariants: Variants = {
   offscreen: {
@@ -45,12 +46,15 @@ interface ProjectCardProps {
 
 function ProjectCard({ project, index }: ProjectCardProps) {
   return (
-    <motion.section
+    <motion.a
       className='group cursor-pointer py-8'
       id='projects'
       initial='offscreen'
       whileInView='onscreen'
       viewport={{ once: true, amount: index > 1 ? 0.5 : 0 }}
+      href={project.url}
+      target='_blank'
+      rel='noreferrer'
     >
       <motion.div variants={cardVariants}>
         <GradientBox className='relative p-0'>
@@ -64,13 +68,23 @@ function ProjectCard({ project, index }: ProjectCardProps) {
               </div>
             }
           />
-          <Image
+          <img
             src={project.image}
             alt={project.name}
-            className='mx-auto transition-all duration-500 ease-in-out group-hover:scale-110'
-            width={500}
-            height={500}
+            className='mx-auto transition-all duration-500 ease-in-out group-hover:scale-105'
+            height={400}
           />
+          <FlexDiv className='absolute right-5 top-5 gap-2 rounded-full bg-white px-3 py-1'>
+            <div
+              className={twMerge(
+                'h-2 w-2 rounded-full',
+                project.language === 'Flutter'
+                  ? 'bg-blue-500'
+                  : 'bg-orange-500',
+              )}
+            />
+            <span className='text-gray-700'>{project.language}</span>
+          </FlexDiv>
         </GradientBox>
         <AnimatedText secondText={project.description} className='ml-8 mt-4'>
           <FlexDiv className='gap-2'>
@@ -79,6 +93,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           </FlexDiv>
         </AnimatedText>
       </motion.div>
-    </motion.section>
+    </motion.a>
   );
 }

@@ -46,32 +46,37 @@ export interface Project {
   description: string;
   image: string;
   url: string;
+  language: 'Flutter' | 'Kotlin';
 }
 
 export const projects: Project[] = [
   {
-    name: 'Sample App',
-    description: 'Short description of the project',
-    image: '/project_1.png',
-    url: 'https://nocadis.com',
+    name: 'Scanning World',
+    description: 'Scan QR codes & earn rewards.',
+    image: '/scanning_world_mock.png',
+    url: 'https://github.com/kriziu/scanningworld-explory',
+    language: 'Flutter',
   },
   {
-    name: 'Another App',
-    description: 'Short description of the project',
-    image: '/project_1.png',
-    url: 'https://nocadis.com',
+    name: 'Chess.io',
+    description: 'Track your chess.com stats.',
+    image: '/chess_io_mock.png',
+    url: 'https://github.com/gonciuu/chess.io',
+    language: 'Flutter',
   },
   {
-    name: 'Final App',
-    description: 'Short description of the project',
-    image: '/project_1.png',
-    url: 'https://nocadis.com',
+    name: 'Medicine App',
+    description: 'Save medicines, receive timely reminders.',
+    image: '/medicine_app_mock.png',
+    url: 'https://github.com/gonciuu/Medicine-App-In-Flutter',
+    language: 'Flutter',
   },
   {
-    name: 'Nice App',
-    description: 'Short description of the project',
-    image: '/project_1.png',
-    url: 'https://nocadis.com',
+    name: 'Hangman Game',
+    description: 'Classic Hangman game in Flutter.',
+    image: '/hangman_mock.png',
+    url: 'https://github.com/gonciuu/Hangman-game-in-flutter',
+    language: 'Flutter',
   },
 ];
 
