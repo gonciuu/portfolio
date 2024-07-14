@@ -4,13 +4,13 @@ import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 import { TbArrowRight } from 'react-icons/tb';
+import { twMerge } from 'tailwind-merge';
 
 import AnimatedText from '../components/AnimatedText';
 import Button from '../components/Button';
 import FlexDiv from '../components/FlexDiv';
 import GradientBox from '../components/GradientBox';
 import { Project, projects } from '../utils/data';
-import { twMerge } from 'tailwind-merge';
 
 const cardVariants: Variants = {
   offscreen: {
@@ -68,11 +68,12 @@ function ProjectCard({ project, index }: ProjectCardProps) {
               </div>
             }
           />
-          <img
+          <Image
             src={project.image}
             alt={project.name}
             className='mx-auto transition-all duration-500 ease-in-out group-hover:scale-105'
-            height={400}
+            height={600}
+            width={600}
           />
           <FlexDiv className='absolute right-5 top-5 gap-2 rounded-full bg-white px-3 py-1'>
             <div
