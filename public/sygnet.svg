@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="9.8791494mm"
+   height="9.8791504mm"
+   viewBox="0 0 9.8791494 9.8791504"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="sygnet.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-45.03651,-25.314087)">
+    <g
+       aria-label="GONCIU"
+       id="text236"
+       style="font-size:14.1111px;font-family:'Zapf Dingbats';-inkscape-font-specification:'Zapf Dingbats';letter-spacing:0.960437px;fill:#121212;stroke-width:0.79375">
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.79375"
+         id="path482"
+         cx="49.976086"
+         cy="30.253662"
+         r="4.9395752" />
+      <path
+         d="m 50.25893,26.708433 q 0.606301,0 1.158469,0.10276 0.552167,0.09248 0.996066,0.298004 l -0.162402,0.750151 q -0.465553,-0.174693 -0.974413,-0.277453 -0.498033,-0.102761 -1.006893,-0.102761 -1.342524,0 -2.111228,0.75015 -0.768703,0.739875 -0.768703,2.106586 0,1.315331 0.725396,2.024377 0.725396,0.69877 2.176189,0.69877 0.346458,0 0.692915,-0.0411 0.357285,-0.05138 0.606302,-0.123313 v -2.2299 h 0.909451 v 2.753975 q -0.411418,0.164417 -1.0502,0.267177 -0.638782,0.113036 -1.277564,0.113036 -0.887798,0 -1.59154,-0.246625 -0.703743,-0.2569 -1.190949,-0.709046 -0.487207,-0.462421 -0.74705,-1.099534 -0.249017,-0.637114 -0.249017,-1.407816 0,-0.80153 0.259844,-1.469472 0.27067,-0.667942 0.768703,-1.140639 0.498034,-0.482973 1.212603,-0.75015 0.714569,-0.267176 1.624021,-0.267177 z"
+         style="font-family:Seravek;-inkscape-font-specification:Seravek;stroke-width:0.593315"
+         id="path1327" />
+    </g>
+  </g>
+</svg>
