@@ -3,43 +3,19 @@
 import FlexDiv from '@/app/components/FlexDiv';
 import { motion } from 'framer-motion';
 import React from 'react';
+import useCurrentProject from '../currentProject';
 
 export default function ProjectData() {
+  const project = useCurrentProject((state) => state.currentProject);
+
   return (
     <FlexDiv
       className='items-start justify-between gap-10 md:gap-4'
       wrapInMobile
     >
-      <ProjectDataView
-        title='Technology'
-        items={[
-          'React',
-          'TypeScript',
-          'Tailwind CSS',
-          'Framer Motion',
-          'Next.js',
-        ]}
-      />
-      <ProjectDataView
-        title='Features'
-        items={[
-          'Responsive Design',
-          'Framer Motion Animations',
-          'Dark Mode',
-          'SEO Optimization',
-          'PWA Support',
-        ]}
-      />
-
-      <ProjectDataView
-        title='Challenges'
-        items={[
-          'Learning Framer Motion',
-          'Implementing Dark Mode',
-          'SEO Optimization',
-          'PWA Support',
-        ]}
-      />
+      <ProjectDataView title='Technology' items={project.technologies ?? []} />
+      <ProjectDataView title='Work' items={project.workTypes ?? []} />
+      <ProjectDataView title='Date' items={[project.date]} />
     </FlexDiv>
   );
 }

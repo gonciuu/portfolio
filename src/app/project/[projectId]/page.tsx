@@ -7,6 +7,7 @@ import ProjectImage from './(components)/ProjectImage';
 import ProjectDescription from './(components)/ProjectDescription';
 import GithubInfo from './(components)/GithubInfo';
 import useCurrentProject from './currentProject';
+import { useShallow } from 'zustand/react/shallow';
 
 interface PageProps {
   projectId: string;
@@ -15,13 +16,20 @@ interface PageProps {
 export default function Page({ params }: { params: PageProps }) {
   const projectId = params.projectId;
 
-  const setCurrentProjectId = useCurrentProject(
-    (state) => state.setCurrentProjectId,
+  const { setCurrentProjectId, isLoading } = useCurrentProject(
+    useShallow((state) => ({
+      setCurrentProjectId: state.setCurrentProjectId,
+      isLoading: state.isLoading,
+    })),
   );
 
   useEffect(() => {
     setCurrentProjectId(parseInt(projectId));
   }, [projectId]);
+
+  if (isLoading) {
+    return null;
+  }
 
   return (
     <div>

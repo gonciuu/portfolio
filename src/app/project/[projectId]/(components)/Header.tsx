@@ -5,12 +5,10 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import useCurrentProject from '../currentProject';
 
-type Props = {};
-
 const headerTransition = entranceTransition({ initialPosition: -30 });
 const subHeaderTransition = entranceTransition();
 
-export default function Header(props: Props) {
+export default function Header() {
   const currentProject = useCurrentProject((state) => state.currentProject);
 
   return (

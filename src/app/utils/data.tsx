@@ -50,6 +50,9 @@ export interface Project {
   image: string;
   url: string;
   language: 'Flutter' | 'Kotlin';
+  technologies?: string[];
+  workTypes?: string[];
+  date: string;
 }
 
 export const projects: Project[] = [
@@ -64,6 +67,9 @@ export const projects: Project[] = [
     image: '/mocks/scanning_world_mock.png',
     url: 'https://github.com/kriziu/scanningworld-explory',
     language: 'Flutter',
+    date: '2021',
+    technologies: ['Flutter', 'Firebase'],
+    workTypes: ['Mobile App', 'App Design'],
   },
   {
     id: 1,
@@ -76,6 +82,9 @@ export const projects: Project[] = [
     image: '/mocks/chess_io_mock.png',
     url: 'https://github.com/gonciuu/chess.io',
     language: 'Flutter',
+    date: '2021',
+    technologies: ['Flutter', 'Chess.com API'],
+    workTypes: ['Mobile App', 'App Design'],
   },
   {
     id: 2,
@@ -88,6 +97,9 @@ export const projects: Project[] = [
     image: '/mocks/medicine_app_mock.png',
     url: 'https://github.com/gonciuu/Medicine-App-In-Flutter',
     language: 'Flutter',
+    date: '2021',
+    technologies: ['Flutter', 'Hive'],
+    workTypes: ['Mobile App', 'App Design'],
   },
   {
     id: 3,
@@ -100,6 +112,9 @@ export const projects: Project[] = [
     image: '/mocks/hangman_mock.png',
     url: 'https://github.com/gonciuu/Hangman-game-in-flutter',
     language: 'Flutter',
+    date: '2021',
+    technologies: ['Flutter', 'Wordnik API'],
+    workTypes: ['Mobile App', 'App Design'],
   },
   {
     id: 4,
@@ -112,6 +127,9 @@ export const projects: Project[] = [
     image: '/mocks/imagine_mock.png',
     url: 'https://github.com/gonciuu/imagine',
     language: 'Kotlin',
+    date: '2021',
+    technologies: ['Kotlin', 'Unsplash API'],
+    workTypes: ['Mobile App', 'App Design'],
   },
   {
     id: 5,
@@ -124,6 +142,9 @@ export const projects: Project[] = [
     image: '/mocks/yeebum_mock.png',
     url: 'https://github.com/gonciuu/Yeelight-Control-Desktop-And-Mobile-Apps',
     language: 'Kotlin',
+    date: '2021',
+    technologies: ['Kotlin', 'Yeelight API'],
+    workTypes: ['Mobile App', 'App Design'],
   },
   {
     id: 6,
@@ -136,6 +157,9 @@ export const projects: Project[] = [
     image: '/mocks/food_scanner_app_mock.png',
     url: 'https://github.com/gonciuu/Food-Scanner-App',
     language: 'Kotlin',
+    date: '2021',
+    technologies: ['Kotlin', 'Nutritionix API'],
+    workTypes: ['Mobile App', 'App Design'],
   },
   {
     id: 7,
@@ -148,6 +172,9 @@ export const projects: Project[] = [
     image: '/mocks/currency_exchange_mock.png',
     url: 'https://github.com/gonciuu/currency-exchange-app-in-kotlin',
     language: 'Kotlin',
+    date: '2021',
+    technologies: ['Kotlin', 'ExchangeRate-API'],
+    workTypes: ['Mobile App', 'App Design'],
   },
 ];
 
