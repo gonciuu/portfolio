@@ -44,6 +44,8 @@ export interface HrefProps {
 export interface Project {
   id: number;
   name: string;
+  tag: string;
+  excerpt: string;
   description: string;
   image: string;
   url: string;
@@ -54,7 +56,11 @@ export const projects: Project[] = [
   {
     id: 0,
     name: 'Scanning World',
-    description: 'Scan QR codes & earn rewards.',
+    tag: 'Scan QR codes & earn rewards.',
+    excerpt:
+      'Scanning World is a mobile application that allows users to scan QR codes to earn rewards.',
+    description:
+      'Scanning World is a mobile application that allows users to scan QR codes to earn rewards. The app uses Firebase for authentication and Firestore to store user data.',
     image: '/mocks/scanning_world_mock.png',
     url: 'https://github.com/kriziu/scanningworld-explory',
     language: 'Flutter',
@@ -62,7 +68,11 @@ export const projects: Project[] = [
   {
     id: 1,
     name: 'Chess.io',
-    description: 'Track your chess.com stats.',
+    tag: 'Track your chess.com stats.',
+    excerpt:
+      'Chess.io is a mobile application that allows users to track their chess.com stats.',
+    description:
+      'Chess.io is a mobile application that allows users to track their chess.com stats. The app uses the chess.com API to fetch user data.',
     image: '/mocks/chess_io_mock.png',
     url: 'https://github.com/gonciuu/chess.io',
     language: 'Flutter',
@@ -70,7 +80,11 @@ export const projects: Project[] = [
   {
     id: 2,
     name: 'Medicine App',
-    description: 'Save medicines, receive reminders.',
+    tag: 'Save medicines, receive reminders.',
+    excerpt:
+      'Medicine App is a mobile application that allows users to save their medicines and receive reminders.',
+    description:
+      'Medicine App is a mobile application that allows users to save their medicines and receive reminders. The app uses Hive for local storage.',
     image: '/mocks/medicine_app_mock.png',
     url: 'https://github.com/gonciuu/Medicine-App-In-Flutter',
     language: 'Flutter',
@@ -78,7 +92,11 @@ export const projects: Project[] = [
   {
     id: 3,
     name: 'Hangman Game',
-    description: 'Classic Hangman game in Flutter.',
+    tag: 'Classic Hangman game in Flutter.',
+    excerpt:
+      'Hangman Game is a mobile application that allows users to play the classic Hangman game.',
+    description:
+      'Hangman Game is a mobile application that allows users to play the classic Hangman game. The app uses the Wordnik API to fetch random words.',
     image: '/mocks/hangman_mock.png',
     url: 'https://github.com/gonciuu/Hangman-game-in-flutter',
     language: 'Flutter',
@@ -86,7 +104,11 @@ export const projects: Project[] = [
   {
     id: 4,
     name: 'Imagine',
-    description: 'Search images and set as wallpaper.',
+    tag: 'Search images and set as wallpaper.',
+    excerpt:
+      'Imagine is a mobile application that allows users to search for images.',
+    description:
+      'Imagine is a mobile application that allows users to search for images and set them as wallpapers. The app uses the Unsplash API to fetch images.',
     image: '/mocks/imagine_mock.png',
     url: 'https://github.com/gonciuu/imagine',
     language: 'Kotlin',
@@ -94,7 +116,11 @@ export const projects: Project[] = [
   {
     id: 5,
     name: 'Yeebum',
-    description: 'Control Xiaomi Yeelight bulbs.',
+    tag: 'Control Xiaomi Yeelight bulbs.',
+    excerpt:
+      'Yeebum is a mobile application that allows users to control Xiaomi Yeelight bulbs.',
+    description:
+      'Yeebum is a mobile application that allows users to control Xiaomi Yeelight bulbs. The app uses the Yeelight API to control the bulbs.',
     image: '/mocks/yeebum_mock.png',
     url: 'https://github.com/gonciuu/Yeelight-Control-Desktop-And-Mobile-Apps',
     language: 'Kotlin',
@@ -102,7 +128,11 @@ export const projects: Project[] = [
   {
     id: 6,
     name: 'Food scanner',
-    description: 'Scan food & get nutritional info.',
+    tag: 'Scan food & get nutritional info.',
+    excerpt:
+      'Food scanner is a mobile application that allows users to scan food items.',
+    description:
+      'Food scanner is a mobile application that allows users to scan food items to get nutritional information. The app uses the Nutritionix API to fetch food data.',
     image: '/mocks/food_scanner_app_mock.png',
     url: 'https://github.com/gonciuu/Food-Scanner-App',
     language: 'Kotlin',
@@ -110,7 +140,11 @@ export const projects: Project[] = [
   {
     id: 7,
     name: 'Currency converter',
-    description: 'Currency exchange rates & converter.',
+    tag: 'Currency exchange rates & converter.',
+    excerpt:
+      'Currency converter is a mobile application that allows users to view currency exchange rates and convert currencies.',
+    description:
+      'Currency converter is a mobile application that allows users to view currency exchange rates and convert currencies. The app uses the ExchangeRate-API to fetch currency data.',
     image: '/mocks/currency_exchange_mock.png',
     url: 'https://github.com/gonciuu/currency-exchange-app-in-kotlin',
     language: 'Kotlin',

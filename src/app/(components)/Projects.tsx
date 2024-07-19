@@ -86,7 +86,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
               <span className='text-gray-700'>{project.language}</span>
             </FlexDiv>
           </GradientBox>
-          <AnimatedText secondText={project.description} className='ml-8 mt-4'>
+          <AnimatedText secondText={project.tag} className='ml-8 mt-4'>
             <FlexDiv className='gap-2'>
               {project.name}
               <TbArrowRight className='-rotate-45' />
