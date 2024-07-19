@@ -61,7 +61,7 @@ const HanburgerNav = () => {
           bounce: 0,
         }}
       >
-        <Image src='logo.svg' alt='logo' width={100} height={50} />
+        <Image src='/logo.svg' alt='logo' width={100} height={50} />
 
         <motion.div variants={variantsContainer} className='mt-8 flex flex-col'>
           {mobileNavItems.map((item) => (

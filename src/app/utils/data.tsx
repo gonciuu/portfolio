@@ -42,6 +42,7 @@ export interface HrefProps {
 }
 
 export interface Project {
+  id: number;
   name: string;
   description: string;
   image: string;
@@ -51,6 +52,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 0,
     name: 'Scanning World',
     description: 'Scan QR codes & earn rewards.',
     image: '/mocks/scanning_world_mock.png',
@@ -58,6 +60,7 @@ export const projects: Project[] = [
     language: 'Flutter',
   },
   {
+    id: 1,
     name: 'Chess.io',
     description: 'Track your chess.com stats.',
     image: '/mocks/chess_io_mock.png',
@@ -65,6 +68,7 @@ export const projects: Project[] = [
     language: 'Flutter',
   },
   {
+    id: 2,
     name: 'Medicine App',
     description: 'Save medicines, receive reminders.',
     image: '/mocks/medicine_app_mock.png',
@@ -72,6 +76,7 @@ export const projects: Project[] = [
     language: 'Flutter',
   },
   {
+    id: 3,
     name: 'Hangman Game',
     description: 'Classic Hangman game in Flutter.',
     image: '/mocks/hangman_mock.png',
@@ -79,6 +84,7 @@ export const projects: Project[] = [
     language: 'Flutter',
   },
   {
+    id: 4,
     name: 'Imagine',
     description: 'Search images and set as wallpaper.',
     image: '/mocks/imagine_mock.png',
@@ -86,6 +92,7 @@ export const projects: Project[] = [
     language: 'Kotlin',
   },
   {
+    id: 5,
     name: 'Yeebum',
     description: 'Control Xiaomi Yeelight bulbs.',
     image: '/mocks/yeebum_mock.png',
@@ -93,6 +100,7 @@ export const projects: Project[] = [
     language: 'Kotlin',
   },
   {
+    id: 6,
     name: 'Food scanner',
     description: 'Scan food & get nutritional info.',
     image: '/mocks/food_scanner_app_mock.png',
@@ -100,6 +108,7 @@ export const projects: Project[] = [
     language: 'Kotlin',
   },
   {
+    id: 7,
     name: 'Currency converter',
     description: 'Currency exchange rates & converter.',
     image: '/mocks/currency_exchange_mock.png',
