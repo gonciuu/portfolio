@@ -1,8 +1,9 @@
+'use client';
+
 import Button from '@/app/components/Button';
-import FlexDiv from '@/app/components/FlexDiv';
 import React from 'react';
 import { TbBrandGithub } from 'react-icons/tb';
-import useCurrentProject from '../currentProject';
+import { useCurrentProject } from '../currentProjectStoreProvider';
 
 const GithubInfo = () => {
   const project = useCurrentProject((state) => state.currentProject);

@@ -3,7 +3,7 @@
 import FlexDiv from '@/app/components/FlexDiv';
 import { motion } from 'framer-motion';
 import React from 'react';
-import useCurrentProject from '../currentProject';
+import { useCurrentProject } from '../currentProjectStoreProvider';
 
 export default function ProjectData() {
   const project = useCurrentProject((state) => state.currentProject);

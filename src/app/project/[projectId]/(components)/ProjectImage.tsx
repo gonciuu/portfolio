@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
-import useCurrentProject from '../currentProject';
+import { useCurrentProject } from '../currentProjectStoreProvider';
 
 export default function ProjectImage() {
   const project = useCurrentProject((state) => state.currentProject);
