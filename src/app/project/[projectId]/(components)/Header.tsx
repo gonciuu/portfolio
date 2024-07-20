@@ -1,8 +1,10 @@
 'use client';
 
-import { entranceTransition } from '@/app/utils/animations';
 import { motion } from 'framer-motion';
 import React from 'react';
+
+import { entranceTransition } from '@/app/utils/animations';
+
 import { useCurrentProject } from '../currentProjectStoreProvider';
 
 const headerTransition = entranceTransition({ initialPosition: -30 });

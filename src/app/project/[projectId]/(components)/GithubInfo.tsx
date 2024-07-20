@@ -1,8 +1,10 @@
 'use client';
 
-import Button from '@/app/components/Button';
 import React from 'react';
 import { TbBrandGithub } from 'react-icons/tb';
+
+import Button from '@/app/components/Button';
+
 import { useCurrentProject } from '../currentProjectStoreProvider';
 
 const GithubInfo = () => {

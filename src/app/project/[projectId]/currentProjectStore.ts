@@ -1,5 +1,6 @@
-import { Project, projects } from '@/app/utils/data';
 import { createStore } from 'zustand/vanilla';
+
+import { Project, projects } from '@/app/utils/data';
 
 type Setter = (newState: Partial<CurrentProjectStoreData>) => void;
 

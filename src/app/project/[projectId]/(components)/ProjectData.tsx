@@ -1,8 +1,10 @@
 'use client';
 
-import FlexDiv from '@/app/components/FlexDiv';
 import { motion } from 'framer-motion';
 import React from 'react';
+
+import FlexDiv from '@/app/components/FlexDiv';
+
 import { useCurrentProject } from '../currentProjectStoreProvider';
 
 export default function ProjectData() {

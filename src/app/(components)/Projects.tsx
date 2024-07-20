@@ -2,6 +2,7 @@
 
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { TbArrowRight } from 'react-icons/tb';
 import { twMerge } from 'tailwind-merge';
@@ -11,7 +12,6 @@ import Button from '../components/Button';
 import FlexDiv from '../components/FlexDiv';
 import GradientBox from '../components/GradientBox';
 import { Project, projects } from '../utils/data';
-import Link from 'next/link';
 
 const cardVariants: Variants = {
   offscreen: {

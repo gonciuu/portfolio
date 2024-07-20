@@ -1,9 +1,10 @@
 import React from 'react';
+
+import GithubInfo from './(components)/GithubInfo';
 import Header from './(components)/Header';
 import ProjectData from './(components)/ProjectData';
-import ProjectImage from './(components)/ProjectImage';
 import ProjectDescription from './(components)/ProjectDescription';
-import GithubInfo from './(components)/GithubInfo';
+import ProjectImage from './(components)/ProjectImage';
 import { CurrentProjectStoreProvider } from './currentProjectStoreProvider';
 
 interface PageProps {
