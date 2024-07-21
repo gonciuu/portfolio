@@ -11,12 +11,12 @@ export default function FlexDiv({
   className,
   wrapInMobile,
 }: FlexDivProps) {
-  const string = wrapInMobile
+  const style = wrapInMobile
     ? 'flex-col items-start justify-start md:flex-row'
     : 'flex';
 
   return (
-    <div className={twMerge(`flex items-center gap-4`, string, className)}>
+    <div className={twMerge(`flex items-center gap-4`, style, className)}>
       {children}
     </div>
   );

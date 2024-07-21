@@ -21,7 +21,9 @@ export default function Navbar() {
     <FlexDiv className='flex w-full justify-between py-12'>
       <motion.div {...navTransition} className='w-full'>
         <FlexDiv className='flex-1 gap-8'>
-          <Image src='logo.svg' alt='logo' width={100} height={50} />
+          <Link href='/'>
+            <Image src='/logo.svg' alt='logo' width={100} height={50} />
+          </Link>
           <FlexDiv className='hidden flex-1 justify-end gap-8 md:flex'>
             <Bookmarks />
             <Button
