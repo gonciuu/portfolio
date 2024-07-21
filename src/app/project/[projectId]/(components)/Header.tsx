@@ -14,7 +14,7 @@ export default function Header() {
   const project = useCurrentProject((state) => state.currentProject);
 
   return (
-    <div className='py-24'>
+    <div className='pb-20 pt-24'>
       <motion.h1 {...headerTransition}>{project.name}</motion.h1>
       <motion.h2 className='mt-4' {...subHeaderTransition}>
         {project.tag}
@@ -23,7 +23,7 @@ export default function Header() {
         className='mt-8 max-w-[700px] text-2xl'
         {...subHeaderTransition}
       >
-        {project.description}
+        {project.excerpt}
       </motion.h2>
     </div>
   );

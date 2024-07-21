@@ -10,7 +10,6 @@ export default function ProjectDescription() {
 
   return (
     <div className='py-12'>
-      <motion.h2>{project.excerpt}</motion.h2>
       <motion.h2 className='mt-8'>{project.description}</motion.h2>
     </div>
   );
