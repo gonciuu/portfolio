@@ -50,8 +50,8 @@ export interface Project {
   image: string;
   url: string;
   language: 'Flutter' | 'Kotlin';
-  technologies?: string[];
-  workTypes?: string[];
+  technologies: string[];
+  workTypes: string[];
   date: string;
 }
 

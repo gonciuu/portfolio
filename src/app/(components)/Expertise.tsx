@@ -1,10 +1,10 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import React from 'react';
 
 import FlexDiv from '../components/FlexDiv';
-import { commonTransition, entranceTransition } from '../utils/animations';
+import { commonTransition } from '../utils/animations';
 import { ExpertiseInfo, expertise } from '../utils/data';
 
 export default function Expertise() {
@@ -30,24 +30,43 @@ export default function Expertise() {
   );
 }
 
+const expertiseVariants: Variants = {
+  offscreen: {
+    y: 30,
+    opacity: 0,
+  },
+  onscreen: (i) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: i * 0.1,
+    },
+  }),
+};
+
 function ExpertiseCard({
   icon,
   title,
   description,
   position,
 }: ExpertiseInfo & { position: number }) {
-  const transition = entranceTransition({ amount: 0.3, delay: position * 0.1 });
-
   return (
     <motion.div
-      className='rounded-2xl border border-gray-100 p-6'
-      {...transition}
+      initial='offscreen'
+      whileInView='onscreen'
+      viewport={{ once: true, amount: 0.3 }}
     >
-      <FlexDiv className='h-16 w-16 items-center justify-center rounded-full bg-gray-50 p-4 text-3xl text-gray-800'>
-        {icon}
-      </FlexDiv>
-      <h3 className='mt-4 text-xl font-bold'>{title}</h3>
-      <p className='mt-2 text-gray-600'>{description}</p>
+      <motion.div
+        variants={expertiseVariants}
+        custom={position}
+        className='rounded-2xl border border-gray-100 p-6'
+      >
+        <FlexDiv className='h-16 w-16 items-center justify-center rounded-full bg-gray-50 p-4 text-3xl text-gray-800'>
+          {icon}
+        </FlexDiv>
+        <h3 className='mt-4 text-xl font-bold'>{title}</h3>
+        <p className='mt-2 text-gray-600'>{description}</p>
+      </motion.div>
     </motion.div>
   );
 }

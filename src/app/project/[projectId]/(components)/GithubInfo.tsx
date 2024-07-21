@@ -1,31 +1,38 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import React from 'react';
 import { TbBrandGithub } from 'react-icons/tb';
 
 import Button from '@/app/components/Button';
+import { entranceTransition } from '@/app/utils/animations';
 
 import { useCurrentProject } from '../currentProjectStoreProvider';
+
+const headerTransition = entranceTransition({ initialPosition: -30 });
+const subHeaderTransition = entranceTransition();
+const buttonTransition = entranceTransition({ delay: 0.2 });
 
 const GithubInfo = () => {
   const project = useCurrentProject((state) => state.currentProject);
 
   return (
     <div className='py-12'>
-      <h1>Enjoy the code</h1>
-      <h2 className='mt-2'>
+      <motion.h1 {...headerTransition}>Enjoy the code</motion.h1>
+      <motion.h2 className='mt-2' {...subHeaderTransition}>
         To get more information about the project, visit the github repository.
-      </h2>
-      <Button
-        icon={<TbBrandGithub />}
-        variant='outlined'
-        className='mt-8'
-        href={project.url}
-        target='_blank'
-        rel='noreferrer'
-      >
-        Visit Github
-      </Button>
+      </motion.h2>
+      <motion.div className='mt-8' {...buttonTransition}>
+        <Button
+          icon={<TbBrandGithub />}
+          variant='outlined'
+          href={project.url}
+          target='_blank'
+          rel='noreferrer'
+        >
+          Visit Github
+        </Button>
+      </motion.div>
     </div>
   );
 };
