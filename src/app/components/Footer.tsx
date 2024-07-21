@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import * as React from 'react';
 import {
   TbArrowRight,
@@ -9,10 +10,11 @@ import {
   TbBrandXdeep,
   TbBrandMedium,
   TbHeartFilled,
+  TbBrandReddit,
 } from 'react-icons/tb';
 
 import { commonTransition } from '../utils/animations';
-import { HrefProps } from '../utils/data';
+import { defaultEmail, defaultMailTo, HrefProps } from '../utils/data';
 
 import AnimatedText from './AnimatedText';
 import Button from './Button';
@@ -26,20 +28,20 @@ export default function Footer() {
       <GradientBox className='p-8 md:p-12'>
         <FlexDiv className='w-full justify-between gap-4' wrapInMobile>
           <h1 className='text-4xl md:text-5xl'>Let&apos;s talk</h1>
-          <Image src='/logo.svg' alt='Logo' width={80} height={40} />
+          <Link href='/'>
+            <Image src='/logo.svg' alt='Logo' width={80} height={40} />
+          </Link>
         </FlexDiv>
         <h2 className='mt-4 max-w-[400px]'>
           Let&apos;s start creating amazing things together
         </h2>
-        <AnimatedText
-          className='mt-8 font-bold underline'
-          href='mailto:kacperwojak17@gmail.com'
-        >
-          kacperwojak17@gmail.com
+        <AnimatedText className='mt-8 font-bold underline' href={defaultMailTo}>
+          {defaultEmail}
         </AnimatedText>
         <FlexDiv className='mt-12 gap-4' wrapInMobile>
           <Button
             className='group'
+            href={defaultMailTo}
             icon={
               <TbArrowRight className='-rotate-45 text-2xl duration-200 group-hover:rotate-0' />
             }
@@ -51,12 +53,13 @@ export default function Footer() {
               href='https://www.linkedin.com/in/kacper-wojak/'
               icon={<TbBrandLinkedin />}
             />
+            <SocialIcon href='https://x.com/gonciuu' icon={<TbBrandXdeep />} />
             <SocialIcon
-              href='https://www.linkedin.com/in/kacper-wojak/'
-              icon={<TbBrandXdeep />}
+              href='https://www.reddit.com/user/FYEF/'
+              icon={<TbBrandReddit />}
             />
             <SocialIcon
-              href='https://www.linkedin.com/in/kacper-wojak/'
+              href='https://medium.com/@gonciu'
               icon={<TbBrandMedium />}
             />
           </FlexDiv>
