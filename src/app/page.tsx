@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+
 import Expertise from './(components)/Expertise';
 import Header from './(components)/Header';
 import Journey from './(components)/Journey';
@@ -14,3 +16,16 @@ export default function Home() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  openGraph: {
+    images: [
+      {
+        url: '/sygnet.svg',
+        width: 512,
+        height: 512,
+        alt: 'Kacper logo',
+      },
+    ],
+  },
+};
