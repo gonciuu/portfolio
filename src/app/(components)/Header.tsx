@@ -8,6 +8,7 @@ import AnimatedText from '../components/AnimatedText';
 import Button from '../components/Button';
 import FlexDiv from '../components/FlexDiv';
 import { entranceTransition } from '../utils/animations';
+import { defaultMailTo } from '../utils/data';
 
 const headerTransition = entranceTransition({ initialPosition: -30 });
 const subHeaderTransition = entranceTransition();
@@ -33,12 +34,13 @@ const Header = () => {
       >
         <FlexDiv className='gap-4' wrapInMobile>
           <motion.div {...portfolioButtonTransition}>
-            <Button>Explore portfolio</Button>
+            <Button href='/#projects'>Explore portfolio</Button>
           </motion.div>
           <motion.div {...letsTalkButtonTransition}>
             <Button
               variant='outlined'
               className='group'
+              href={defaultMailTo}
               icon={
                 <TbArrowRight className='-rotate-45 text-2xl duration-200 group-hover:rotate-0' />
               }

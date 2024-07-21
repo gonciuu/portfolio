@@ -276,3 +276,6 @@ export const journeys: JourneyInfo[] = [
     ],
   },
 ];
+
+export const defaultEmail = process.env.PORTFOLIO_EMAIL;
+export const defaultMailTo = `mailto:${defaultEmail}`;

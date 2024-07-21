@@ -7,7 +7,7 @@ import * as React from 'react';
 import { TbArrowRight } from 'react-icons/tb';
 
 import { entranceTransition } from '../utils/animations';
-import { navigationItems } from '../utils/data';
+import { defaultMailTo, navigationItems } from '../utils/data';
 
 import AnimatedText from './AnimatedText';
 import Button from './Button';
@@ -29,6 +29,7 @@ export default function Navbar() {
             <Button
               variant='outlined'
               className='group px-4 py-2 transition-all'
+              href={defaultMailTo}
               icon={
                 <TbArrowRight className='-rotate-45 text-2xl duration-200 group-hover:rotate-0' />
               }
