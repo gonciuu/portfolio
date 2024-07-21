@@ -19,13 +19,6 @@ export default function Home() {
 
 export const metadata: Metadata = {
   openGraph: {
-    images: [
-      {
-        url: '/sygnet.svg',
-        width: 512,
-        height: 512,
-        alt: 'Kacper logo',
-      },
-    ],
+    images: ['/sygnet.png'],
   },
 };
