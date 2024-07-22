@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 import { defaultUrl, projects } from '../utils/data';
 
-export function generateSitemaps() {
+export async function generateSitemaps() {
   return projects;
 }
 
