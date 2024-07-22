@@ -59,7 +59,7 @@ export const projects: Project[] = [
   {
     id: 0,
     name: 'Scanning World',
-    tag: 'Scan QR codes & earn rewards.',
+    tag: 'Scan QR codes & earn rewards',
     excerpt:
       'Scanning World is a mobile application that allows users to scan QR codes to earn rewards. Users can accumulate points and exchange them for valuable rewards.',
     description:
@@ -80,7 +80,7 @@ export const projects: Project[] = [
   {
     id: 1,
     name: 'Chess.io',
-    tag: 'Track your chess.com stats.',
+    tag: 'Track your chess.com stats',
     excerpt:
       'Chess.io is a mobile application that allows users to track their chess.com stats.',
     description:
@@ -95,7 +95,7 @@ export const projects: Project[] = [
   {
     id: 2,
     name: 'Medicine App',
-    tag: 'Save medicines, receive reminders.',
+    tag: 'Save medicines, receive reminders',
     excerpt:
       'Medicine App is a mobile application that allows users to save their medicines and receive reminders.',
     description:
@@ -110,7 +110,7 @@ export const projects: Project[] = [
   {
     id: 3,
     name: 'Hangman Game',
-    tag: 'Classic Hangman game in Flutter.',
+    tag: 'Classic Hangman game in Flutter',
     excerpt:
       'Enjoy a classic Hangman game built with Flutter, featuring a random word generator and smooth gameplay.',
     description:
@@ -129,7 +129,7 @@ export const projects: Project[] = [
   {
     id: 4,
     name: 'Imagine',
-    tag: 'Search images and set as wallpaper.',
+    tag: 'Search images and set as wallpaper',
     excerpt:
       'Discover beautiful images and set them as your wallpaper with the Imagine app.',
     description:
@@ -144,7 +144,7 @@ export const projects: Project[] = [
   {
     id: 5,
     name: 'Yeebum',
-    tag: 'Control Xiaomi Yeelight bulbs.',
+    tag: 'Control Xiaomi Yeelight bulbs',
     excerpt:
       'Easily control your Xiaomi Yeelight bulbs remotely with the Yeebum app.',
     description:
@@ -159,7 +159,7 @@ export const projects: Project[] = [
   {
     id: 6,
     name: 'Food scanner',
-    tag: 'Scan food & get nutritional info.',
+    tag: 'Scan food & get nutritional info',
     excerpt:
       'Food scanner is a mobile application that allows users to scan food items and get detailed nutritional information.',
     description:
@@ -174,7 +174,7 @@ export const projects: Project[] = [
   {
     id: 7,
     name: 'Currency converter',
-    tag: 'Currency exchange rates & converter.',
+    tag: 'Currency exchange rates & converter',
     excerpt:
       'Currency converter is a mobile application that allows users to view currency exchange rates and convert currencies.',
     description:
