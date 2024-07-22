@@ -11,10 +11,12 @@ export default async function sitemap({
 }: {
   id: number;
 }): Promise<MetadataRoute.Sitemap> {
-  return projects.map(() => ({
-    url: `${defaultUrl}/project/${id}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.5,
-  }));
+  return [
+    {
+      url: `${defaultUrl}/project/${id}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.5,
+    },
+  ];
 }
