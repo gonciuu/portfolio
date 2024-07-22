@@ -21,4 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: ['/sygnet.png'],
   },
+  twitter: {
+    images: ['/sygnet.png'],
+  },
 };
