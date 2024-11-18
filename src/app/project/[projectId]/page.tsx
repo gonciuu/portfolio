@@ -14,8 +14,9 @@ interface PageProps {
   projectId: string;
 }
 
-export default function Page({ params }: { params: PageProps }) {
-  const projectId = parseInt(params.projectId);
+export default function Page({ params }: { params: Promise<PageProps> }) {
+  const projectIdStr = React.use(params).projectId;
+  const projectId = parseInt(projectIdStr);
 
   return (
     <CurrentProjectStoreProvider projectId={projectId}>
@@ -29,10 +30,11 @@ export default function Page({ params }: { params: PageProps }) {
 }
 
 export async function generateMetadata(
-  { params }: { params: PageProps },
+  { params }: { params: Promise<PageProps> },
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
-  const projectId = parseInt(params.projectId);
+  const projectIdStr = (await params).projectId;
+  const projectId = parseInt(projectIdStr);
   const project = projects.find((p) => p.id === projectId) || projects[0];
 
   const previousImages = (await parent).openGraph?.images || [];

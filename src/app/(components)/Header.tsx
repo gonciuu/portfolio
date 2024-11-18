@@ -29,7 +29,7 @@ const Header = () => {
         that blend innovative design with seamless functionality.
       </motion.h2>
       <FlexDiv
-        className='mt-12 w-full  md:items-center md:justify-between'
+        className='mt-12 w-full md:items-center md:justify-between'
         wrapInMobile
       >
         <FlexDiv className='gap-4' wrapInMobile>
