@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env: {
-        PORTFOLIO_EMAIL: process.env.PORTFOLIO_EMAIL,
-        PORTFOLIO_URL: process.env.PORTFOLIO_URL,
+        NEXT_PUBLIC_PORTFOLIO_EMAIL: process.env.NEXT_PUBLIC_PORTFOLIO_EMAIL,
+        NEXT_PUBLIC_PORTFOLIO_URL: process.env.NEXT_PUBLIC_PORTFOLIO_URL,
     }
 }
 

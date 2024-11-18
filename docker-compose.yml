@@ -2,9 +2,14 @@ services:
   app:
     build:
       context: .
+      args:
+        NEXT_PUBLIC_PORTFOLIO_EMAIL: ${NEXT_PUBLIC_PORTFOLIO_EMAIL}
+        NEXT_PUBLIC_PORTFOLIO_URL: ${NEXT_PUBLIC_PORTFOLIO_URL}
     ports:
       - '3000:3000'
+    env_file:
+      - .env
     environment:
       - NODE_ENV=production
-      - PORTFOLIO_EMAIL=${PORTFOLIO_EMAIL}
-      - PORTFOLIO_URL=${PORTFOLIO_URL}
+      - NEXT_PUBLIC_PORTFOLIO_EMAIL=${NEXT_PUBLIC_PORTFOLIO_EMAIL}
+      - NEXT_PUBLIC_PORTFOLIO_URL=${NEXT_PUBLIC_PORTFOLIO_URL}

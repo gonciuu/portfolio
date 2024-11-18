@@ -277,7 +277,7 @@ export const journeys: JourneyInfo[] = [
   },
 ];
 
-export const defaultEmail = process.env.PORTFOLIO_EMAIL;
+export const defaultEmail = process.env.NEXT_PUBLIC_PORTFOLIO_EMAIL;
 export const defaultMailTo = `mailto:${defaultEmail}`;
 
-export const defaultUrl = process.env.PORTFOLIO_URL as string;
+export const defaultUrl = process.env.NEXT_PUBLIC_PORTFOLIO_URL as string;

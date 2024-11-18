@@ -76,7 +76,6 @@ export default [
 
       // Disable conflicting rules from Prettier
       ...prettierConfig.rules,
-      ...nextCoreWebVitals.c,
     },
   },
 ];
