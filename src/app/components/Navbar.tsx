@@ -17,8 +17,6 @@ import HanburgerNav from './HanburgerNav';
 const navTransition = entranceTransition({ initialPosition: -30 });
 
 export default function Navbar() {
-  console.log(process.env.NEXT_PUBLIC_PORTFOLIO_EMAIL);
-  console.log(process.env.NEXT_PUBLIC_PORTFOLIO_URL);
   return (
     <FlexDiv className='flex w-full justify-between py-12'>
       <motion.div {...navTransition} className='w-full'>
