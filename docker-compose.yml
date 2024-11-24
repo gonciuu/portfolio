@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   app:
     build:
@@ -11,29 +10,6 @@ services:
     env_file:
       - .env
     environment:
-      NODE_ENV: production
-      NEXT_PUBLIC_PORTFOLIO_EMAIL: ${NEXT_PUBLIC_PORTFOLIO_EMAIL}
-      NEXT_PUBLIC_PORTFOLIO_URL: ${NEXT_PUBLIC_PORTFOLIO_URL}
-    depends_on:
-      - caddy
-
-  caddy:
-    image: caddy:latest
-    container_name: caddy
-    ports:
-      - '80:80'
-      - '443:443'
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile
-      - caddy_data:/data
-      - caddy_config:/config
-    networks:
-      - app_network
-
-networks:
-  app_network:
-    driver: bridge
-
-volumes:
-  caddy_data:
-  caddy_config:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_PORTFOLIO_EMAIL=${NEXT_PUBLIC_PORTFOLIO_EMAIL}
+      - NEXT_PUBLIC_PORTFOLIO_URL=${NEXT_PUBLIC_PORTFOLIO_URL}
