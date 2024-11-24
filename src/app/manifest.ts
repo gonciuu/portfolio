@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Kacper | Flutter Mobile App Developer',
-    short_name: 'Mobile App Developer',
+    short_name: 'Mobile Flutter App Developer',
     description:
       'I am a Flutter Mobile App Developer with a passion for creating beautiful and functional mobile applications.',
     start_url: '/',
