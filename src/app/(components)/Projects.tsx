@@ -61,6 +61,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
               className='group absolute left-8 top-8 p-3 opacity-0 transition-all duration-500 ease-in-out group-hover:-rotate-45 group-hover:scale-110 group-hover:opacity-100'
               rel='noreferrer'
               target='_blank'
+              ariaLabel='View Project'
               icon={
                 <div className='text-2xl'>
                   <TbArrowRight />

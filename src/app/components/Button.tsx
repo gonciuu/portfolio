@@ -8,6 +8,7 @@ import FlexDiv from './FlexDiv';
 
 interface ButtonProps extends PropsWithChildren, HrefProps {
   className?: string;
+  ariaLabel?: string;
   variant?: 'filled' | 'outlined';
   icon?: React.ReactNode;
   onClick?: () => void;
@@ -15,6 +16,7 @@ interface ButtonProps extends PropsWithChildren, HrefProps {
 
 export default function Button({
   className,
+  ariaLabel,
   children,
   variant = 'filled',
   icon,
@@ -30,6 +32,7 @@ export default function Button({
 
   const button = (
     <button
+      aria-label={ariaLabel}
       className={twMerge(
         'rounded-full px-8 py-3 text-xl outline-amber-500 transition duration-200 ease-in-out hover:shadow-lg',
         variant === 'filled' ? filledVariantClasses : outlinedVariantClasses,
@@ -46,7 +49,13 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href} className='block' target={target} rel={rel}>
+      <Link
+        href={href}
+        className='block'
+        target={target}
+        rel={rel}
+        aria-label={ariaLabel}
+      >
         {button}
       </Link>
     );

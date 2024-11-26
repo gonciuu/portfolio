@@ -51,15 +51,22 @@ export default function Footer() {
           <FlexDiv className='gap-4'>
             <SocialIcon
               href='https://www.linkedin.com/in/kacper-wojak/'
+              ariaLabel='LinkedIn'
               icon={<TbBrandLinkedin />}
             />
-            <SocialIcon href='https://x.com/gonciuu' icon={<TbBrandXdeep />} />
+            <SocialIcon
+              href='https://x.com/gonciuu'
+              ariaLabel='X'
+              icon={<TbBrandXdeep />}
+            />
             <SocialIcon
               href='https://www.reddit.com/user/FYEF/'
+              ariaLabel='Reddit'
               icon={<TbBrandReddit />}
             />
             <SocialIcon
               href='https://medium.com/@gonciu'
+              ariaLabel='Medium'
               icon={<TbBrandMedium />}
             />
           </FlexDiv>
@@ -87,11 +94,13 @@ export default function Footer() {
 
 interface SocialIconProps extends HrefProps {
   icon: React.ReactNode;
+  ariaLabel: string;
 }
 
-function SocialIcon({ icon, href }: SocialIconProps) {
+function SocialIcon({ icon, href, ariaLabel }: SocialIconProps) {
   return (
     <Button
+      ariaLabel={ariaLabel}
       variant='outlined'
       href={href}
       className='group p-3'
