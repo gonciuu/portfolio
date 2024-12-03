@@ -19,6 +19,7 @@ export default function RootLayout({
       <head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link rel='icon' href='/sygnet.svg' type='image/svg+xml' />
+        <script defer src="https://stats.gonciu.dev/script.js" data-website-id="52cc0779-fb21-4ade-afb4-6fc9fc574e1b"></script>
       </head>
       <body className={dmSans.className}>
         <div className='mx-auto max-w-screen-xl px-4'>
