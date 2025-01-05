@@ -48,7 +48,7 @@ export interface Project {
   excerpt: string;
   description: string;
   image: string;
-  url: string;
+  url?: string;
   language: 'Flutter' | 'Kotlin';
   technologies: string[];
   workTypes: string[];
@@ -57,7 +57,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 0,
+    id: 8,
+    name: 'Pizza Craft',
+    tag: 'Craft perfect pizzas!',
+    excerpt:
+      'Pizza Craft is a mobile app that calculates pizza dough ingredients and lets users save recipes. It also offers a library of topping recipes for customizing the perfect pizza.',
+    description:
+      'Pizza Craft is a comprehensive tool designed for pizza enthusiasts, enabling users to accurately calculate the quantities of ingredients required for pizza dough by inputting parameters like the number of pizzas and desired dough size. The app allows users to save their favorite dough recipes for easy access and management. Additionally, Pizza Craft offers an extensive library of topping recipes, providing inspiration for creating unique and delicious pizza combinations. The intuitive user interface ensures a seamless experience for both amateur cooks and professional pizzaioli. The backend efficiently manages user data and recipe storage, ensuring reliability and security.',
+    image: '/mocks/pizza_craft_mock.png',
+    language: 'Flutter',
+    date: '2025',
+    technologies: ['Flutter', 'Drift database', 'Supabase'],
+    workTypes: ['Mobile App', 'App Design'],
+  },
+  {
+    id: 7,
     name: 'Scanning World',
     tag: 'Scan QR codes & earn rewards',
     excerpt:
@@ -78,7 +92,7 @@ export const projects: Project[] = [
     workTypes: ['Mobile App', 'App Design'],
   },
   {
-    id: 1,
+    id: 6,
     name: 'Chess.io',
     tag: 'Track your chess.com stats',
     excerpt:
@@ -93,7 +107,7 @@ export const projects: Project[] = [
     workTypes: ['Mobile App', 'App Design'],
   },
   {
-    id: 2,
+    id: 5,
     name: 'Medicine App',
     tag: 'Save medicines, receive reminders',
     excerpt:
@@ -108,7 +122,7 @@ export const projects: Project[] = [
     workTypes: ['Mobile App', 'App Design'],
   },
   {
-    id: 3,
+    id: 4,
     name: 'Hangman Game',
     tag: 'Classic Hangman game in Flutter',
     excerpt:
@@ -127,7 +141,7 @@ export const projects: Project[] = [
     workTypes: ['Mobile App', 'App Design'],
   },
   {
-    id: 4,
+    id: 3,
     name: 'Imagine',
     tag: 'Search images and set as wallpaper',
     excerpt:
@@ -142,7 +156,7 @@ export const projects: Project[] = [
     workTypes: ['Mobile App', 'App Design'],
   },
   {
-    id: 5,
+    id: 2,
     name: 'Yeebum',
     tag: 'Control Xiaomi Yeelight bulbs',
     excerpt:
@@ -157,7 +171,7 @@ export const projects: Project[] = [
     workTypes: ['Mobile App', 'Desktop App', 'App Design'],
   },
   {
-    id: 6,
+    id: 1,
     name: 'Food scanner',
     tag: 'Scan food & get nutritional info',
     excerpt:
@@ -172,7 +186,7 @@ export const projects: Project[] = [
     workTypes: ['Mobile App', 'App Design'],
   },
   {
-    id: 7,
+    id: 0,
     name: 'Currency converter',
     tag: 'Currency exchange rates & converter',
     excerpt:

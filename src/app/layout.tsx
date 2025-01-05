@@ -2,6 +2,7 @@ import { DM_Sans } from 'next/font/google';
 
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import { defaultUrl } from './utils/data';
 
 import type { Metadata } from 'next';
 
@@ -37,7 +38,7 @@ export default function RootLayout({
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://portfolio-phi-five-57.vercel.app'),
+  metadataBase: new URL(defaultUrl),
   applicationName: 'Portfolio',
   keywords:
     'Kacper, Flutter, Mobile App Developer, iOS, Android, Dart, UI/UX Design, API Integration, Performance Optimization',

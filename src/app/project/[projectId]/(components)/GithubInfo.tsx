@@ -2,10 +2,11 @@
 
 import { motion } from 'framer-motion';
 import React from 'react';
-import { TbBrandGithub } from 'react-icons/tb';
+import { TbBrandGithub, TbMail } from 'react-icons/tb';
 
 import Button from '@/app/components/Button';
 import { entranceTransition } from '@/app/utils/animations';
+import { defaultMailTo } from '@/app/utils/data';
 
 import { useCurrentProject } from '../currentProjectStoreProvider';
 
@@ -15,6 +16,28 @@ const buttonTransition = entranceTransition({ delay: 0.2 });
 
 const GithubInfo = () => {
   const project = useCurrentProject((state) => state.currentProject);
+
+  if (!project.url)
+    return (
+      <div className='py-12'>
+        <motion.h1 {...headerTransition}>Enjoy the app</motion.h1>
+        <motion.h2 className='mt-2' {...subHeaderTransition}>
+          The app is not available on Github, but you can contact me if you want
+          more information about the project or if you want some support.
+        </motion.h2>
+        <motion.div className='mt-8' {...buttonTransition}>
+          <Button
+            icon={<TbMail />}
+            variant='outlined'
+            href={defaultMailTo}
+            target='_blank'
+            rel='noreferrer'
+          >
+            Contact me
+          </Button>
+        </motion.div>
+      </div>
+    );
 
   return (
     <div className='py-12'>
