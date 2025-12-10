@@ -60,7 +60,7 @@ function JourneyCard({
         </Button>
       </motion.div>
       <motion.ul
-        className='max-w-[500px] flex-1 px-8 text-lg'
+        className='max-w-[560px] flex-1 px-8 text-lg'
         variants={variantsContainer}
         initial='closed'
         whileInView='open'

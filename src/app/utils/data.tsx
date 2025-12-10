@@ -55,6 +55,12 @@ export interface Project {
   date: string;
 }
 
+const getExperienceYearsLabel = (startYear: number) => {
+  const currentYear = new Date().getFullYear();
+  const years = Math.max(currentYear - startYear, 0);
+  return `${years}+ years`;
+};
+
 export const projects: Project[] = [
   {
     id: 8,
@@ -282,11 +288,11 @@ export const journeys: JourneyInfo[] = [
     target: '_blank',
     rel: 'noopener noreferrer',
     items: [
-      '2+ years of experience in Android development using Kotlin',
-      '2+ years of experience with Flutter',
-      '1+ year of experience in iOS development',
-      'Proficient in using Git for version control',
-      'Currently working at Nocadis, developing robust mobile solutions',
+      `${getExperienceYearsLabel(2020)} of experience in Android development using Kotlin`,
+      `${getExperienceYearsLabel(2020)} of experience with Flutter`,
+      `${getExperienceYearsLabel(2021)} of experience in web development with React.js`,
+      `${getExperienceYearsLabel(2023)} of experience in iOS development`,
+      'Currently working at Nocadis, developing robust mobile and web solutions',
     ],
   },
 ];
