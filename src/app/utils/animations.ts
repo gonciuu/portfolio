@@ -1,3 +1,5 @@
+import { type MotionProps } from 'framer-motion';
+
 interface EntranceTransitionProps {
   initialPosition?: number;
   delay?: number;
@@ -8,11 +10,16 @@ export function entranceTransition({
   initialPosition = 30,
   delay = 0.2,
   amount = 0.5,
-}: EntranceTransitionProps = {}) {
+}: EntranceTransitionProps = {}): MotionProps {
   return {
     initial: { opacity: 0, y: initialPosition },
     whileInView: { opacity: 1, y: 0 },
-    transition: { duration: 0.7, type: 'spring', bounce: 0.6, delay },
+    transition: {
+      duration: 0.7,
+      type: 'spring' as const,
+      bounce: 0.6,
+      delay,
+    },
     viewport: { once: true, amount: amount },
   };
 }

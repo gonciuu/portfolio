@@ -1,7 +1,6 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
-import React from 'react';
 
 import FlexDiv from '../components/FlexDiv';
 import { commonTransition } from '../utils/animations';

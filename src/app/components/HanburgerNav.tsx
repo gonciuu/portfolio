@@ -42,7 +42,7 @@ const mobileNavItems = [
 
 const HanburgerNav = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLElement | null>(null);
   const { height } = useDimensions(containerRef);
 
   return (

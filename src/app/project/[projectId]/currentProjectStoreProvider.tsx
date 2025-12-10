@@ -26,7 +26,7 @@ export const CurrentProjectStoreProvider = ({
   children,
   projectId,
 }: CurrentProjectStoreProviderProps) => {
-  const storeRef = useRef<CurrentProjectStoreApi>();
+  const storeRef = useRef<CurrentProjectStoreApi | null>(null);
   if (!storeRef.current) {
     storeRef.current = createCurrentProjectStore(
       initCurrentProjectStore(projectId),
