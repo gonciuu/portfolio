@@ -1,15 +1,17 @@
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import prettierConfig from 'eslint-config-prettier';
+import importPlugin from 'eslint-plugin-import-x';
 import prettierPlugin from 'eslint-plugin-prettier';
 import reactHooks from 'eslint-plugin-react-hooks';
-import importPlugin from 'eslint-plugin-import';
 
 export default [
+  {
+    ignores: ['node_modules/', '.next/', 'coverage/'],
+  },
   // Base JavaScript/TypeScript configuration
   {
-    files: ['**/app/**/*.{ts,tsx,js,jsx}'],
-    ignores: ['node_modules/', '.next/'],
+    files: ['src/**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       parser: typescriptParser,
     },
@@ -17,7 +19,7 @@ export default [
       '@typescript-eslint': typescriptEslintPlugin,
       'react-hooks': reactHooks,
       prettier: prettierPlugin,
-      import: importPlugin,
+      'import-x': importPlugin,
     },
     rules: {
       // React Hooks rules
@@ -33,7 +35,7 @@ export default [
       ],
 
       // Import ordering rules
-      'import/order': [
+      'import-x/order': [
         'error',
         {
           groups: [

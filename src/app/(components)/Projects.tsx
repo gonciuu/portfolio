@@ -58,7 +58,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         <motion.div variants={cardVariants}>
           <GradientBox className='relative p-0'>
             <Button
-              className='group absolute left-8 top-8 p-3 opacity-0 transition-all duration-500 ease-in-out group-hover:-rotate-45 group-hover:scale-110 group-hover:opacity-100'
+              className='group absolute top-8 left-8 p-3 opacity-0 transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:-rotate-45 group-hover:opacity-100'
               rel='noreferrer'
               target='_blank'
               ariaLabel='View Project'
@@ -75,7 +75,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
               height={600}
               width={600}
             />
-            <FlexDiv className='absolute right-5 top-5 gap-2 rounded-full bg-white px-3 py-1'>
+            <FlexDiv className='absolute top-5 right-5 gap-2 rounded-full bg-white px-3 py-1'>
               <div
                 className={twMerge(
                   'h-2 w-2 rounded-full',
@@ -87,7 +87,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
               <span className='text-gray-700'>{project.language}</span>
             </FlexDiv>
           </GradientBox>
-          <AnimatedText secondText={project.tag} className='ml-8 mt-4'>
+          <AnimatedText secondText={project.tag} className='mt-4 ml-8'>
             <FlexDiv className='gap-2'>
               {project.name}
               <TbArrowRight className='-rotate-45' />

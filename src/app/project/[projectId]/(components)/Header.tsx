@@ -14,7 +14,7 @@ export default function Header() {
   const project = useCurrentProject((state) => state.currentProject);
 
   return (
-    <div className='pb-20 pt-24'>
+    <div className='pt-24 pb-20'>
       <motion.h1 {...headerTransition}>{project.name}</motion.h1>
       <motion.h2 className='mt-4' {...subHeaderTransition}>
         {project.tag}
