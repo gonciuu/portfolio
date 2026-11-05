@@ -5,8 +5,8 @@ services:
       args:
         NEXT_PUBLIC_PORTFOLIO_EMAIL: ${NEXT_PUBLIC_PORTFOLIO_EMAIL}
         NEXT_PUBLIC_PORTFOLIO_URL: ${NEXT_PUBLIC_PORTFOLIO_URL}
-    ports:
-      - '3000:3000'
+    expose:
+      - '3000'
     env_file:
       - .env
     environment:
