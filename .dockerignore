@@ -1,6 +1,5 @@
 # Node and Bun dependencies
 node_modules
-bun.lockb
 .pnp
 .pnp.js
 
