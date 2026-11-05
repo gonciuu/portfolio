@@ -1,14 +1,14 @@
 # Use the official Bun image
-FROM oven/bun:latest
+FROM oven/bun:1.4.4
 
 # Set the working directory
 WORKDIR /app
 
-# Copy package.json and bun.lockb (if it exists)
-COPY package.json bun.lockb* ./
+# Copy manifest, lockfile and bunfig (enforces 7-day minimumReleaseAge)
+COPY package.json bun.lock bunfig.toml ./
 
 # Install dependencies
-RUN bun install
+RUN bun install --frozen-lockfile
 
 # Copy the rest of the application code
 COPY . .

@@ -54,7 +54,7 @@ const HanburgerNav = () => {
       ref={containerRef}
     >
       <motion.div
-        className='fixed right-0 top-0 z-10 h-screen w-[300px] border-l border-gray-200 bg-gray-50 p-12'
+        className='fixed top-0 right-0 z-10 h-screen w-[300px] border-l border-gray-200 bg-gray-50 p-12'
         variants={sidebarAnimation}
         transition={{
           duration: 0.7,
@@ -73,7 +73,7 @@ const HanburgerNav = () => {
       </motion.div>
       <Button
         variant='outlined'
-        className='fixed right-8 top-8 z-10 h-12 w-12 p-3'
+        className='fixed top-8 right-8 z-10 h-12 w-12 p-3'
         icon={
           isOpen ? (
             <TbX className='text-2xl' />

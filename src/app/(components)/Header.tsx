@@ -49,7 +49,7 @@ const Header = () => {
             </Button>
           </motion.div>
         </FlexDiv>
-        <FlexDiv className='ml-2 mt-4 flex-col items-start gap-1 md:ml-0 md:mt-0 md:items-end md:justify-end'>
+        <FlexDiv className='mt-4 ml-2 flex-col items-start gap-1 md:mt-0 md:ml-0 md:items-end md:justify-end'>
           <motion.div {...portfolioButtonTransition}>
             <AnimatedText className='text-md mt-1 h-5 md:text-end'>
               flutter developer · designer

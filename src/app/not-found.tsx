@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <div className='py-24'>
       <h2>Oops! The Page You are Looking for is on Vacation!</h2>
-      <p className='pb-8 pt-2'>
+      <p className='pt-2 pb-8'>
         It seems the page you aree looking for decided it needed a break and
         jetted off to a tropical island!
       </p>
